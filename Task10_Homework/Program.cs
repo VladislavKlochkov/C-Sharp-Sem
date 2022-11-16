@@ -13,8 +13,7 @@ int number = Convert.ToInt32(Console.ReadLine());
 int SecondDigit(int num)
 {
     int num1 = num % 100;
-    int num3 = num % 10;
-    int num2 = (num1 - num3) / 10;
+    int num2 = num1 / 10;
     return num2;
 }
 
