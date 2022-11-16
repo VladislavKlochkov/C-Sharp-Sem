@@ -9,13 +9,13 @@
 Console.WriteLine("Введите число");
 int number = Convert.ToInt32(Console.ReadLine());
 
-int thirdDigit(int num)
+int ThirdDigit(int num)
 {
     while (num >= 1000 || num <= -1000) num = num / 10;
     return num % 10;
 }
 
-int res = thirdDigit(number);
+int res = ThirdDigit(number);
 
 if (number > 99)
 {
