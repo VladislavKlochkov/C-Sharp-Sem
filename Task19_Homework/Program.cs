@@ -11,19 +11,20 @@
 Console.WriteLine("Введите пятизначное число:");
 int number = Convert.ToInt32(Console.ReadLine());
 
-string Palindrome(int n)
+bool Palindrome(int n)
 {
     int n1 = n / 10000;
     int n2 = n % 10000 / 1000;
     int n4 = n % 100 / 10;
     int n5 = n % 10;
-    if (n1 == n5 && n2 == n4) return "Введённое число является палиндромом";
-    return "Введённое число не является палиндромом";
+    if (n1 == n5 && n2 == n4) return true;
+    return false;
 }
-string res = Palindrome(number);
+bool res = Palindrome(number);
+string resStr = res ? "является палиндромом" : "не является палиндромом";
 
 if (number > 9999 && number < 100000)
 {
-    Console.WriteLine(res);
+    Console.WriteLine($"Число {number} -> {resStr}");
 }
 else Console.WriteLine($"Введённое вами число не является пятизначным");
