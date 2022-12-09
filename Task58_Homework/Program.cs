@@ -40,11 +40,11 @@ void PrintMatrix(int[,] matrix)
 int[,] MatrixMultiplication(int[,] firstMatrix, int[,] secondMatrix)
 {
     int[,] resMatrix = new int[firstMatrix.GetLength(0), secondMatrix.GetLength(1)];
-    for (int i = 0; i < firstMatrix.GetLength(0); i++)
+    for (int i = 0; i < resMatrix.GetLength(0); i++)
     {
-        for (int j = 0; j < secondMatrix.GetLength(0); j++)
+        for (int j = 0; j < resMatrix.GetLength(1); j++)
         {
-            for (int m = 0; m < secondMatrix.GetLength(1); m++)
+            for (int m = 0; m < firstMatrix.GetLength(1); m++)
             {
                 resMatrix[i, j] += firstMatrix[i, m] * secondMatrix[m, j];
             }
